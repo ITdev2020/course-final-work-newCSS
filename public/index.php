@@ -29,35 +29,35 @@ require __DIR__ . '/../app/src/app.php';
 		<!-- tiny-slider -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 
-		<!-- Link style.css-->
+		<!-- Reset browsers default style-->
+		<link rel="stylesheet" href="../app/css/reset.css" />
+		<!-- Page style.css-->
 		<link rel="stylesheet" href="../app/css/style.css" />
 	</head>
 	<body>
-		<!-- Back to top button -->
-		<!-- <button class="fas fa-chevron-up" onclick="topFunction()" id="to-top" title="Go to top"></button> -->
-		<!-- Go to home button -->
+		<!-- Go to home (Back to top) button -->
 		<button class="fas fa-chevron-up" onclick="document.location='#home'" id="to-top" title="Go to home"></button>
 		<!-- Login -->
 		<section class="login default-width">
 			<div>
 				<?php
-                    if(isset($_SESSION['u_id'])) {
-                        echo '<form action="../app/includes/logout.inc.php" method="post">
-                        <button type="submit" name="submit">Logout</button></form>';
-                    } else {
-                        echo '<form action="../app/includes/login.inc.php" method="post">
-                        <input type="text" name="uid" placeholder="Username" />
-                        <input type="password" name="pwd" placeholder="Password" />
-                        <button type="submit" name="submit">Login</button>
-						<button type="reset" onclick="document.location=\'../app/src/signup.php\'">Sign up</button>
-						</form>';
-                    }
+          if(isset($_SESSION['u_id'])) {
+            echo '<form action="../app/includes/logout.inc.php" method="post">
+                  <button type="submit" name="submit">Logout</button></form>';
+          } else {
+            echo '<form action="../app/includes/login.inc.php" method="post">
+                  <input type="text" name="uid" placeholder="Username" />
+                  <input type="password" name="pwd" placeholder="Password" />
+                  <button type="submit" name="submit">Login</button>
+                  <button type="reset" onclick="document.location=\'../app/src/signup.php\'">Sign up</button>
+                  </form>';
+          }
 				?>
 				<?php
-            		if(isset($_SESSION['u_id'])) {
-                		echo "<p>Prisijungete sekmingai</p>";
-            		}
-        		?>
+          if(isset($_SESSION['u_id'])) {
+            echo "<p>Prisijungete sekmingai</p>";
+          }
+        ?>
 			</div>
 		</section>
 
