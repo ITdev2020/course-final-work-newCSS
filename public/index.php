@@ -36,7 +36,7 @@ require __DIR__ . '/../app/src/app.php';
 	</head>
 	<body>
 		<!-- Go to home (Back to top) button -->
-		<button class="fas fa-chevron-up" onclick="document.location='#home'" id="to-top" title="Go to home"></button>
+		<button class="to-top-btn fas fa-chevron-up" onclick="document.location='#home'" id="to-top" title="Go to home"></button>
 		<!-- Login -->
 		<section class="login default-width">
 			<div>
@@ -61,12 +61,12 @@ require __DIR__ . '/../app/src/app.php';
 			</div>
 		</section>
 
-		<section class="header">
 		<!-- Section: page header -->
-		<div id="home">
+		<section class="header">
+			<div class="default-width" id="home">
 
 				<!-- Navigation container -->
-				<div class="nav default-width">
+				<div class="nav">
 					<!-- Left side -->
 					<div>
 						<a href="#home">
@@ -75,19 +75,19 @@ require __DIR__ . '/../app/src/app.php';
 					</div>
 
 					<!-- Right side -->
-					<div class="mobhide">
+					<div class="phone-hide">
 						<a href="#">Home</a>
 					</div>
-					<div class="mobhide">
+					<div class="phone-hide">
 						<a href="#">Mega Menu</a>
 					</div>
-					<div class="mobhide">
+					<div class="phone-hide">
 						<a href="#">About</a>
 					</div>
-					<div class="mobhide">
+					<div class="phone-hide">
 						<a href="#">Blog</a>
 					</div>
-					<div class="mobhide">
+					<div class="phone-hide">
 						<a href="#">Contact</a>
 					</div>
 					<div>
@@ -119,7 +119,7 @@ require __DIR__ . '/../app/src/app.php';
 
 				<!-- Hero container -->
 				<div class="hero">
-					<div class="default-width">
+					<div>
 						<!-- Left: hero text -->
 						<div>
 							<h1>Organic & natural healthy lifestyle</h1>

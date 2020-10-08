@@ -1,6 +1,193 @@
 div {
 	outline: 2px solid red;
 	&>*:nth-child(1n+2) {
-        outline: 1px solid green;
-    }
+    outline: 1px solid green;
+  }
 }
+
+
+// Brand color:  ======================
+$brand-green-color: #34c759;
+$brand-green-color-hover: #2b9c48;
+$brand-gray-bg-color: #fafafa;
+$brand-gray-text-color: #666;
+$brand-dark-color: #222;
+
+
+// different media width
+$tablet-maxwidth: 800px;
+$phone-maxwidth: 430px;
+
+
+body {
+  font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: $brand-gray-text-color;
+}
+
+.default-width {
+	max-width: 1169px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+
+// Back to top button
+.to-top-btn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: $brand-green-color; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 2em; /* Increase font size */
+  margin: 30px;
+  &:hover {
+    background-color: $brand-green-color-hover; /* Add a darker background on hover */
+  }
+  &:active {
+    background-color: $brand-gray-text-color; /* Add a gray background on active */
+  }
+}
+
+@media (max-width: $phone-maxwidth) {
+	.to-top-btn {
+		margin: 0;
+	}
+}
+// ^^^ Back to top button
+
+
+// Login
+.login {
+  form {
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    * {
+      margin-right: 10px;
+      color: $brand-gray-text-color;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      border-radius: 5px;
+    }
+  
+  }
+  input {
+    border: 1px solid $brand-green-color;
+  }
+  button {
+    cursor: pointer;
+    // Pritaikiau Sass funkcija, nusvesinti brand spalva.
+    background-color: lighten($color: $brand-green-color, $amount: 40%);
+  }
+}
+
+// ^^^ Login
+
+
+.nav {
+  height: 68px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  div:nth-child(1) {
+    margin-right: auto;
+    // mob 320 width
+    // width: 35px;
+    img {
+      // padding-left: 15px;
+    }
+  }
+  // div:last-child {
+  //   align-self: flex-start;
+  //   margin-top: 16px;
+  // }
+  .burger {
+    display: none;
+    position: absolute;
+    align-self: flex-start;
+    margin: 16px;
+    color: $brand-green-color;
+    font-size: 35px;
+    text-align: right;
+    padding-right: 10px;
+	}
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  position: relative;
+  padding-left: 0;
+  li {
+    background-color: $brand-green-color;
+    border-radius: 6px;
+  }
+}
+
+
+
+// .burger {
+//   display: block;
+//   color: $brand-green-color;
+//   font-size: 35px;
+//   text-align: right;
+//   padding-right: 10px;
+//   ul {
+//     display: none;
+//     margin: 0;
+//     list-style: none;
+//     position: absolute;
+//     z-index: 1;
+//     left: 120px;
+//     top: 170px;
+//     li {
+//     font-size: 25px;
+//     height: 45px;
+//     line-height: 45px;
+//     border-bottom: 1px solid white;
+//     width: 150px;
+//     margin-left: auto;
+//     background-color: $brand-green-color;
+//     border-radius: 6px;
+//     a {
+//       color: white;
+//       display: flex;
+//       justify-content: center;
+//     }
+//     }
+//   }
+// }
+
+
+
+
+// .nav {
+//   height: 68px;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+//   div:nth-child(1) {
+//     margin-right: auto;
+//   }
+//   div:nth-child(1n + 2) {
+//     margin-left: 35px;
+//   }
+//   .btn {
+//     border: 0.25px solid #666;
+//     color: $brand-dark-color;
+//     background: white;
+//     &:hover {
+//       background-color: darken($color: white, $amount: 5);
+//     }
+//   }
+// }
