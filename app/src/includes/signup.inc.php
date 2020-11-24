@@ -12,17 +12,17 @@
         // Error handlers
         // Patikriname ar yra tusciu laukeliu
         if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-            header("Location: ../src/signup.php?signup=empty");
+            header("Location: ../signup.php?signup=empty");
             exit();
         } else {
             // Patikriname ar teisingai ivesti simboliai
             if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)) {
-                header("Location: ../src/signup.php?signup=invalid");
+                header("Location: ../signup.php?signup=invalid");
                 exit();
             } else {
                 // Patikriname ar galiojantis email formatas
                 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    header("Location: ../src/signup.php?signup=invalidemail");
+                    header("Location: ../signup.php?signup=invalidemail");
                     exit();
                 } else {
                     // Patikriname ar username jau naudijamas
@@ -30,7 +30,7 @@
                     $result = mysqli_query($conn, $sql);
                     $result_check = mysqli_num_rows($result);
                     if ($result_check > 0) {
-                        header("Location: ../src/signup.php?signup=usertaken");
+                        header("Location: ../signup.php?signup=usertaken");
                         exit();
                     } else {
                         // Sukuriame hash slaptazodziui
@@ -39,13 +39,14 @@
                         $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd)
                         VALUES('$first', '$last', '$email', '$uid', '$hashedPwd');";
                         mysqli_query($conn, $sql);
-                        header("Location: ../src/signup.php?signup=success");
+                        header("Location: ../signup.php?signup=success");
+                        header("Location: ../../../public/index.php");
                         exit();
                     }
                 }
             }
         }
     } else {
-        header("Location: ../src/signup.php");
+        header("Location: ../signup.php");
         exit();
     }

@@ -7,21 +7,21 @@
         // Error handlers
         // Patikriname ar yra tusciu laukeliu
         if (empty($uid) || empty($pwd)) {
-            header("Location: ../../public/index.php?=login=empty");
+            header("Location: ../../../public/index.php?=login=empty");
             exit();
         } else {
             $sql = "SELECT * FROM users WHERE user_uid = '$uid'";
             $result = mysqli_query($conn, $sql);
             $result_check = mysqli_num_rows($result);
             if($result_check < 1) {
-                header("Location: ../../public/index.php?=login=error");
+                header("Location: ../../../public/index.php?=login=error");
                 exit();
             } else {
                 if($row = mysqli_fetch_assoc($result)) {
                     // dehashing slaptazodi
                     $hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
                     if($hashedPwdCheck == false) {
-                        header("Location: ../../public/index.php?=login=error");
+                        header("Location: ../../../public/index.php?=login=error");
                         exit();
                     } elseif($hashedPwdCheck == true) {
                         // Login vartotoja i svetaine
@@ -30,13 +30,13 @@
                         $_SESSION['u_last'] = $row['user_last'];
                         $_SESSION['u_email'] = $row['user_email'];
                         $_SESSION['u_uid'] = $row['user_uid'];
-                        header("Location: ../../public/index.php?=login=success");
+                        header("Location: ../../../public/index.php?=login=success");
                         exit();
                     }
                 }
             }
         }
     } else {
-        header("Location: ../../public/index.php?=login=error");
+        header("Location: ../../../public/index.php?=login=error");
         exit();
     }
