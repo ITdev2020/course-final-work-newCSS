@@ -1,6 +1,6 @@
 		<!-- Section: Blog -->
-		<section class="blog">
-			<div class="default-width">
+		<section class="blog default-width">
+			<div>
 				<!-- Title -->
 				<div>
 					<h5>Daily Blog journal</h5>

@@ -1,6 +1,6 @@
 <!-- Section: Footer -->
-<section class="footer">
-    <div class="default-width">
+<section class="footer default-width">
+    <div>
         <div>
             <h5>Resources</h5>
             <h6>About Us</h6>

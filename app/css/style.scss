@@ -1,92 +1,288 @@
 div {
-	outline: 2px solid red;
-	& > *:nth-child(1n + 2) {
-		outline: 1px solid green;
-	}
+
+  // outline: 1px solid red;
+  &>*:nth-child(1n + 2) {
+    // outline: 1px solid green;
+  }
 }
 
-// Brand color:  ======================
+/* Commons vvv ====================== */
+/* Brand color */
 $brand-green-color: #34c759;
 $brand-green-color-hover: #2b9c48;
 $brand-gray-bg-color: #fafafa;
 $brand-gray-text-color: #666;
 $brand-dark-color: #222;
 
-// different media width
+/* different media width */
 $tablet-maxwidth: 800px;
 $phone-maxwidth: 430px;
 
 body {
-	font-family: "Roboto", sans-serif;
-	font-weight: 300;
-	font-size: 14px;
-	color: $brand-gray-text-color;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: $brand-gray-text-color;
 }
 
 .default-width {
-	max-width: 1169px;
-	margin: 0 auto;
-	padding: 0 10px;
+  max-width: 1169px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-// Back to top button
+h2,
+h3 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  // font-size: 40px;
+  // line-height: 48px;
+  // text-align: center;
+  color: white;
+}
+
+h3 {
+  font-size: 32px;
+  text-align: center;
+  color: $brand-dark-color;
+  margin-top: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: none;
+  border-radius: 5px;
+  background: $brand-green-color;
+  width: 175px;
+  height: 42px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+
+  &:hover {
+    background: $brand-green-color-hover;
+    cursor: pointer;
+  }
+}
+
+/* Commons ^^^ ====================== */
+
+/* Back to top button vvv */
 .to-top-btn {
-	display: none; /* Hidden by default */
-	position: fixed; /* Fixed/sticky position */
-	bottom: 20px; /* Place the button at the bottom of the page */
-	right: 30px; /* Place the button 30px from the right */
-	z-index: 99; /* Make sure it does not overlap */
-	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: $brand-green-color; /* Set a background brand color */
-	color: white; /* Text color */
-	cursor: pointer; /* Change a mouse pointer on hover */
-	padding: 15px; /* Some padding */
-	border-radius: 10px; /* Rounded corners */
-	font-size: 2em; /* Increase font size */
-	margin: 30px;
-	&:hover {
-		background-color: $brand-green-color-hover; /* Add a darker brand color on hover */
-	}
-	&:active {
-		background-color: $brand-gray-text-color; /* Add a gray background on active */
-	}
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  background-color: $brand-green-color;
+  /* Set a background brand color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Change a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 2em;
+  /* Increase font size */
+  margin: 30px;
+
+  &:hover {
+    background-color: $brand-green-color-hover;
+    /* Add a darker brand color on hover */
+  }
+
+  &:active {
+    background-color: $brand-gray-text-color;
+    /* Add a gray background on active */
+  }
 }
 
 @media (max-width: $phone-maxwidth) {
-	.to-top-btn {
-		margin: 0;
-	}
+  .to-top-btn {
+    margin: 0;
+    /*on phone margins to zero */
+  }
 }
-// ^^^ Back to top button
 
-// Login
+/* ^^^ Back to top button */
+
+/* Login vvv */
 .login {
-	form {
-		height: 30px;
-		display: flex;
-		justify-content: flex-end;
-		* {
-			margin-right: 10px;
-			color: $brand-gray-text-color;
-			font-family: "Roboto", sans-serif;
-			font-size: 14px;
-			font-weight: 300;
-			border-radius: 5px;
-		}
-	}
-	input {
-		border: 1px solid $brand-green-color;
-	}
-	button {
-		cursor: pointer;
-		// Pritaikiau Sass funkcija, nusvesinti brand spalva.
-		background-color: lighten($color: $brand-green-color, $amount: 40%);
-	}
+  form {
+    height: 45px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+
+    * {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: $brand-gray-text-color;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      border-radius: 5px;
+    }
+  }
+
+  input {
+    border: 1px solid $brand-green-color;
+  }
+
+  button {
+    cursor: pointer;
+    /* I applied the Sass feature to lighten the brand color. */
+    background-color: lighten($color: $brand-green-color, $amount: 40%);
+  }
 }
 
-// ^^^ Login
+@media (max-width: $phone-maxwidth) {
+  .login {
+    form {
+      input {
+        width: 30%;
+      }
+    }
+  }
+}
 
+/* ^^^ Login */
+
+//
+//
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  & :nth-child(1),
+  & :nth-child(7) {
+    margin-right: auto;
+  }
+
+  .phone-hide {
+    display: none;
+  }
+
+  .btn {
+    border: 0.25px solid #666;
+    color: $brand-dark-color;
+    background: white;
+
+    &:hover {
+      background-color: darken($color: white, $amount: 5);
+    }
+  }
+
+  .burger {
+    display: block;
+    // margin: 16px;
+    color: $brand-green-color;
+    font-size: 35px;
+    text-align: right;
+    padding-right: 10px;
+
+    ul {
+      // display: none;
+      margin: 0;
+      list-style: none;
+      position: absolute;
+      z-index: 1;
+      left: 120px;
+      top: 100px;
+
+      li {
+        font-size: 25px;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid white;
+        padding: 0 5px;
+        // width: 150px;
+        // margin-left: auto;
+        background-color: $brand-green-color;
+        border-radius: 6px;
+
+        a {
+          color: white;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+.sponsors {
+  height: 102px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    padding: 10px;
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/*
 .nav {
 	height: 68px;
 	display: flex;
@@ -179,3 +375,4 @@ ul {
 //     }
 //   }
 // }
+*/

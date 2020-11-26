@@ -1,6 +1,6 @@
 <!-- Section: page header -->
-<section class="header">
-  <div class="default-width" id="home">
+<section class="header default-width">
+  <div id="home">
 
     <?php
 			include('../app/views/nav.php');

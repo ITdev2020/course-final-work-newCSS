@@ -1,6 +1,6 @@
 		<!-- Section: Features -->
-		<section class="features">
-			<div class="default-width">
+		<section class="features default-width">
+			<div>
 				<!-- Title -->
 				<div class="title">
 					<h5>Organic Business Features</h5>

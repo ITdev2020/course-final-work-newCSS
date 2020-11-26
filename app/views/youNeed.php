@@ -1,6 +1,6 @@
 		<!-- Section: Everything you ever need. -->
-		<section class="you-need">
-			<div class="default-width">
+		<section class="you-need default-width">
+			<div>
 				<div class="left">
 					<div>
 						<h5>Set up your website in minutes and bring your brand to life.</h5>

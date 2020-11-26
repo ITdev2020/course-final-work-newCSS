@@ -2,13 +2,19 @@
   box-sizing: border-box;
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
+html,
+body {
+  /* padding: 0; */
+  /* margin: 0; */
   font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
@@ -16,7 +22,8 @@ a {
   text-decoration: none;
 }
 
-input, button {
+input,
+button {
   border: none;
   outline: none;
 }
