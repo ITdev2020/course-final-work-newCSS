@@ -1,6 +1,6 @@
 <!-- Navigation container -->
 
-<div class="nav">
+<div class="nav default-width">
 
   <!-- Left side -->
   <div>

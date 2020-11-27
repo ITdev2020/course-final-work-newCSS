@@ -14,21 +14,36 @@ body {
   padding: 0 10px;
 }
 
-h2,
-h3 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: normal;
-}
-
 h2 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 40px;
   color: white;
 }
 
 h3 {
+  font-family: "Open Sans", sans-serif;
   font-size: 32px;
-  text-align: center;
   color: #222;
   margin-top: 10px;
+}
+
+h4 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 19px;
+  line-height: 14px;
+  color: #222;
+}
+
+h5 {
+  font-size: 16px;
+  color: #222;
+}
+
+h6 {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
 }
 
 .btn {
@@ -94,7 +109,7 @@ h3 {
   /* Add a gray background on active */
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   .to-top-btn {
     margin: 0;
     /*on phone margins to zero */
@@ -115,7 +130,7 @@ h3 {
 }
 
 .login form * {
-  margin-right: 10px;
+  margin-left: 10px;
   margin-bottom: 10px;
   color: #666;
   font-family: "Roboto", sans-serif;
@@ -134,13 +149,14 @@ h3 {
   background-color: #d3f4dc;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   .login form input {
     width: 30%;
   }
 }
 
 /* ^^^ Login */
+/* Navigation menu vvv */
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,15 +164,21 @@ h3 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.nav :nth-child(1),
-.nav :nth-child(7) {
+.nav :nth-child(1) {
   margin-right: auto;
 }
 
-.nav .phone-hide {
-  display: none;
+.nav :nth-child(1n + 2) {
+  margin-left: 1.5%;
+}
+
+.nav a {
+  color: #666;
 }
 
 .nav .btn {
@@ -169,34 +191,38 @@ h3 {
   background-color: #f2f2f2;
 }
 
-.nav .burger {
-  display: block;
+.burger,
+.burger > ul {
+  display: none;
+}
+
+.burger {
   color: #34c759;
   font-size: 35px;
   text-align: right;
   padding-right: 10px;
 }
 
-.nav .burger ul {
+.burger ul {
   margin: 0;
   list-style: none;
   position: absolute;
   z-index: 1;
-  left: 120px;
+  right: 5%;
   top: 100px;
 }
 
-.nav .burger ul li {
+.burger ul li {
   font-size: 25px;
   height: 45px;
   line-height: 45px;
   border-bottom: 1px solid white;
-  padding: 0 5px;
+  padding: 0 10px;
   background-color: #34c759;
   border-radius: 6px;
 }
 
-.nav .burger ul li a {
+.burger ul li a {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,14 +232,79 @@ h3 {
           justify-content: flex-end;
 }
 
+@media (max-width: 500px) {
+  .phone-hide {
+    display: none;
+  }
+  .nav :nth-child(7) {
+    margin-right: auto;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+/* ^^^ Navigation menu */
+/* Hero vvv */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 11px;
+  height: 753px;
+  background-color: #fafafa;
+}
+
+.grid-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 1fr;
+      grid-template-columns: 45% 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-wrapper h1 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 60px;
+  color: #111;
+}
+
+.grid-wrapper p {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 30px 30px 40px 0;
+}
+
+.grid-wrapper button {
+  margin-bottom: 35px;
+}
+
+.grid-wrapper img {
+  max-width: 814px;
+  height: auto;
+}
+
+/* ^^^ Hero */
+/* sponsors vvv */
 .sponsors {
+  border-top: 0.25px solid #707070;
+  border-bottom: 0.25px solid #707070;
+}
+
+.sponsors-logo {
   height: 102px;
   padding: 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -221,102 +312,214 @@ h3 {
       flex-wrap: wrap;
 }
 
-.sponsors img {
+.sponsors-logo img {
   padding: 10px;
 }
 
-/*
-.nav {
-	height: 68px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	div:nth-child(1) {
-		margin-right: auto;
-		// mob 320 width
-		// width: 35px;
-		img {
-			// padding-left: 15px;
-		}
-	}
-	// div:last-child {
-	//   align-self: flex-start;
-	//   margin-top: 16px;
-	// }
-	.burger {
-		display: none;
-		position: absolute;
-		align-self: flex-start;
-		margin: 16px;
-		color: $brand-green-color;
-		font-size: 35px;
-		text-align: right;
-		padding-right: 10px;
-	}
+/* ^^^ sponsors */
+/* features vvv */
+.features {
+  height: 793px;
+  padding-top: 80px;
 }
 
-ul {
-	list-style: none;
-	margin-top: 0;
-	position: relative;
-	padding-left: 0;
-	li {
-		background-color: $brand-green-color;
-		border-radius: 6px;
-	}
+.features .title {
+  text-align: center;
 }
 
-// .burger {
-//   display: block;
-//   color: $brand-green-color;
-//   font-size: 35px;
-//   text-align: right;
-//   padding-right: 10px;
-//   ul {
-//     display: none;
-//     margin: 0;
-//     list-style: none;
-//     position: absolute;
-//     z-index: 1;
-//     left: 120px;
-//     top: 170px;
-//     li {
-//     font-size: 25px;
-//     height: 45px;
-//     line-height: 45px;
-//     border-bottom: 1px solid white;
-//     width: 150px;
-//     margin-left: auto;
-//     background-color: $brand-green-color;
-//     border-radius: 6px;
-//     a {
-//       color: white;
-//       display: flex;
-//       justify-content: center;
-//     }
-//     }
-//   }
-// }
+.features-cards {
+  margin-top: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
-// .nav {
-//   height: 68px;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-//   div:nth-child(1) {
-//     margin-right: auto;
-//   }
-//   div:nth-child(1n + 2) {
-//     margin-left: 35px;
-//   }
-//   .btn {
-//     border: 0.25px solid #666;
-//     color: $brand-dark-color;
-//     background: white;
-//     &:hover {
-//       background-color: darken($color: white, $amount: 5);
-//     }
-//   }
-// }
-*/
+.features-cards-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  max-width: 265px;
+  height: 328px;
+  border-radius: 5px;
+  border: 0.25px solid #707070;
+}
+
+.features-cards-item img,
+.features-cards-item h6,
+.features-cards-item h4 {
+  margin: 0 auto;
+}
+
+.features-cards-item img {
+  padding: 10px 0 5px 0;
+}
+
+.features-cards-item h4 {
+  margin: 10px 0 30px 0;
+}
+
+.features-cards-item h6 {
+  padding: 0 35px 10px 35px;
+}
+
+.features-cards-item-underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-position: under;
+}
+
+/* ^^^ features */
+/* you-need vvv */
+.you-need {
+  height: 625px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../assets/background_.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
+  background-position: center center;
+  background-size: 1939px 1044px;
+}
+
+.you-need-wrapper {
+  max-height: 625px;
+  padding-bottom: 97px;
+  display: -ms-grid;
+  display: grid;
+  /* Inserted one empty row and column, for margins between grid items */
+  -ms-grid-rows: 1fr 0.1fr 0.65fr;
+  -ms-grid-columns: (0.5fr)[3] 0.15fr 1fr;
+      grid-template: 1fr 0.1fr 0.65fr/repeat(3, 0.5fr) 0.15fr 1fr;
+}
+
+.you-need-wrapper h4,
+.you-need-wrapper h5,
+.you-need-wrapper h6 {
+  color: white;
+  white-space: pre-line;
+}
+
+.you-need-wrapper h4 {
+  margin: 15px 0;
+}
+
+.you-need-wrapper :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1/1/2/4;
+  white-space: pre-line;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.you-need-wrapper :nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3/1/4/2;
+}
+
+.you-need-wrapper :nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3/2/4/3;
+}
+
+.you-need-wrapper :nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 3/3/4/4;
+}
+
+.you-need-wrapper :nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 1/5/4/6;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-start;
+}
+
+/* ^^^ you-need */
+/* send-message vvv */
+.send-message {
+  height: 840px;
+}
+
+.send-message > :nth-child(1) {
+  max-width: 800px;
+  padding: 85px 0 0;
+  margin: 0 auto;
+}
+
+.send-message h4 {
+  margin: 40px 0 10px 0;
+  font-size: 22px;
+}
+
+.send-message h3 {
+  text-align: center;
+}
+
+.send-message input,
+.send-message textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+
+.send-message textarea {
+  height: 160px;
+  resize: none;
+}
+
+.send-message .btn {
+  height: 80px;
+  width: 220px;
+  border-radius: 0px 4px 4px 0px;
+  font-size: 22px;
+  font-family: "PT Sans", sans-serif;
+  margin: 20px 0 0 auto;
+}
+
+/* ^^^ send-message */
+.solution {
+  height: 523px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../assets/background_.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
+  background-position: center center;
+  background-size: 1939px 1044px;
+}
+
+.solution > :nth-child(1) {
+  min-height: 200px;
+}
+
+/* solution vvv */
+/* ^^^ solution */
+/* blog vvv */
+/* ^^^ blog */
+/* footer vvv */
+/* ^^^ footer */
 /*# sourceMappingURL=style.css.map */

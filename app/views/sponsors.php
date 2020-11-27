@@ -1,6 +1,6 @@
 <!-- Section: Sponsors -->
-<section>
-	<div class="sponsors">
+<section class="sponsors">
+	<div class="sponsors-logo default-width">
 		<img src="../app/assets/client-1.png" alt="client-1 logo" />
 		<img src="../app/assets/client-2.png" alt="client-2 logo" />
 		<img src="../app/assets/client-3.png" alt="client-3 logo" />

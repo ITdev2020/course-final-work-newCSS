@@ -1,12 +1,12 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-  /* padding: 0; */
-  /* margin: 0; */
-  font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
 }
 
 h1,
@@ -15,19 +15,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+	font-weight: normal;
+	margin: 0;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 input,
 button {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 
 button:focus {
-  outline: none;
+	outline: none;
 }

@@ -1,9 +1,9 @@
 div {
+	// outline: 1px solid red;
 
-  // outline: 1px solid red;
-  &>*:nth-child(1n + 2) {
-    // outline: 1px solid green;
-  }
+	& > *:nth-child(1n + 2) {
+		// outline: 1px solid green;
+	}
 }
 
 /* Commons vvv ====================== */
@@ -16,363 +16,450 @@ $brand-dark-color: #222;
 
 /* different media width */
 $tablet-maxwidth: 800px;
-$phone-maxwidth: 430px;
+$phone-maxwidth: 500px;
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: $brand-gray-text-color;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: $brand-gray-text-color;
 }
 
 .default-width {
-  max-width: 1169px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-h2,
-h3 {
-  font-family: "PT Sans", sans-serif;
-  font-weight: normal;
+	max-width: 1169px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
 h2 {
-  // font-size: 40px;
-  // line-height: 48px;
-  // text-align: center;
-  color: white;
+	font-family: "PT Sans", sans-serif;
+	font-size: 40px;
+	// line-height: 48px;
+	// text-align: center;
+	color: white;
 }
 
 h3 {
-  font-size: 32px;
-  text-align: center;
-  color: $brand-dark-color;
-  margin-top: 10px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 32px;
+	color: $brand-dark-color;
+	margin-top: 10px;
+}
+
+h4 {
+	font-family: "PT Sans", sans-serif;
+	font-size: 19px;
+	line-height: 14px;
+	color: $brand-dark-color;
+}
+
+h5 {
+	font-size: 16px;
+	color: $brand-dark-color;
+}
+
+h6 {
+	font-family: "Roboto";
+	font-size: 14px;
+	line-height: 24px;
+	color: $brand-gray-text-color;
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // border: none;
-  border-radius: 5px;
-  background: $brand-green-color;
-  width: 175px;
-  height: 42px;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 15px;
-  color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// border: none;
+	border-radius: 5px;
+	background: $brand-green-color;
+	width: 175px;
+	height: 42px;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 15px;
+	color: white;
 
-  &:hover {
-    background: $brand-green-color-hover;
-    cursor: pointer;
-  }
+	&:hover {
+		background: $brand-green-color-hover;
+		cursor: pointer;
+	}
 }
 
 /* Commons ^^^ ====================== */
 
 /* Back to top button vvv */
 .to-top-btn {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 30px;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
-  background-color: $brand-green-color;
-  /* Set a background brand color */
-  color: white;
-  /* Text color */
-  cursor: pointer;
-  /* Change a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 10px;
-  /* Rounded corners */
-  font-size: 2em;
-  /* Increase font size */
-  margin: 30px;
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Fixed/sticky position */
+	bottom: 20px;
+	/* Place the button at the bottom of the page */
+	right: 30px;
+	/* Place the button 30px from the right */
+	z-index: 99;
+	/* Make sure it does not overlap */
+	background-color: $brand-green-color;
+	/* Set a background brand color */
+	color: white;
+	/* Text color */
+	cursor: pointer;
+	/* Change a mouse pointer on hover */
+	padding: 15px;
+	/* Some padding */
+	border-radius: 10px;
+	/* Rounded corners */
+	font-size: 2em;
+	/* Increase font size */
+	margin: 30px;
 
-  &:hover {
-    background-color: $brand-green-color-hover;
-    /* Add a darker brand color on hover */
-  }
+	&:hover {
+		background-color: $brand-green-color-hover;
+		/* Add a darker brand color on hover */
+	}
 
-  &:active {
-    background-color: $brand-gray-text-color;
-    /* Add a gray background on active */
-  }
+	&:active {
+		background-color: $brand-gray-text-color;
+		/* Add a gray background on active */
+	}
 }
 
 @media (max-width: $phone-maxwidth) {
-  .to-top-btn {
-    margin: 0;
-    /*on phone margins to zero */
-  }
+	.to-top-btn {
+		margin: 0;
+		/*on phone margins to zero */
+	}
 }
 
 /* ^^^ Back to top button */
 
 /* Login vvv */
 .login {
-  form {
-    height: 45px;
-    padding-bottom: 0px;
-    display: flex;
-    justify-content: flex-end;
+	form {
+		height: 45px;
+		padding-bottom: 0px;
+		display: flex;
+		justify-content: flex-end;
 
-    * {
-      margin-right: 10px;
-      margin-bottom: 10px;
-      color: $brand-gray-text-color;
-      font-family: "Roboto", sans-serif;
-      font-size: 14px;
-      font-weight: 300;
-      border-radius: 5px;
-    }
-  }
+		* {
+			margin-left: 10px;
+			margin-bottom: 10px;
+			color: $brand-gray-text-color;
+			font-family: "Roboto", sans-serif;
+			font-size: 14px;
+			font-weight: 300;
+			border-radius: 5px;
+		}
+	}
 
-  input {
-    border: 1px solid $brand-green-color;
-  }
+	input {
+		border: 1px solid $brand-green-color;
+	}
 
-  button {
-    cursor: pointer;
-    /* I applied the Sass feature to lighten the brand color. */
-    background-color: lighten($color: $brand-green-color, $amount: 40%);
-  }
+	button {
+		cursor: pointer;
+		/* I applied the Sass feature to lighten the brand color. */
+		background-color: lighten($color: $brand-green-color, $amount: 40%);
+	}
 }
 
 @media (max-width: $phone-maxwidth) {
-  .login {
-    form {
-      input {
-        width: 30%;
-      }
-    }
-  }
+	.login {
+		form {
+			input {
+				width: 30%;
+			}
+		}
+	}
 }
 
 /* ^^^ Login */
 
 //
 //
+/* Navigation menu vvv */
 .nav {
-  display: flex;
-  justify-content: flex-end;
-
-  & :nth-child(1),
-  & :nth-child(7) {
-    margin-right: auto;
-  }
-
-  .phone-hide {
-    display: none;
-  }
-
-  .btn {
-    border: 0.25px solid #666;
-    color: $brand-dark-color;
-    background: white;
-
-    &:hover {
-      background-color: darken($color: white, $amount: 5);
-    }
-  }
-
-  .burger {
-    display: block;
-    // margin: 16px;
-    color: $brand-green-color;
-    font-size: 35px;
-    text-align: right;
-    padding-right: 10px;
-
-    ul {
-      // display: none;
-      margin: 0;
-      list-style: none;
-      position: absolute;
-      z-index: 1;
-      left: 120px;
-      top: 100px;
-
-      li {
-        font-size: 25px;
-        height: 45px;
-        line-height: 45px;
-        border-bottom: 1px solid white;
-        padding: 0 5px;
-        // width: 150px;
-        // margin-left: auto;
-        background-color: $brand-green-color;
-        border-radius: 6px;
-
-        a {
-          color: white;
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-    }
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-.sponsors {
-  height: 102px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-
-  img {
-    padding: 10px;
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/*
-.nav {
-	height: 68px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	div:nth-child(1) {
+
+	& :nth-child(1) {
 		margin-right: auto;
-		// mob 320 width
-		// width: 35px;
-		img {
-			// padding-left: 15px;
+	}
+
+	& :nth-child(1n + 2) {
+		margin-left: 1.5%;
+	}
+
+	a {
+		color: $brand-gray-text-color;
+	}
+
+	.btn {
+		border: 0.25px solid #666;
+		color: $brand-dark-color;
+		background: white;
+
+		&:hover {
+			background-color: darken($color: white, $amount: 5);
 		}
 	}
-	// div:last-child {
-	//   align-self: flex-start;
-	//   margin-top: 16px;
-	// }
-	.burger {
-		display: none;
+}
+
+.burger,
+.burger > ul {
+	display: none;
+}
+
+.burger {
+	// display: none;
+	color: $brand-green-color;
+	font-size: 35px;
+	text-align: right;
+	padding-right: 10px;
+
+	ul {
+		// display: none;
+		margin: 0;
+		list-style: none;
 		position: absolute;
-		align-self: flex-start;
-		margin: 16px;
-		color: $brand-green-color;
-		font-size: 35px;
-		text-align: right;
-		padding-right: 10px;
+		z-index: 1;
+		right: 5%;
+		top: 100px;
+
+		li {
+			font-size: 25px;
+			height: 45px;
+			line-height: 45px;
+			border-bottom: 1px solid white;
+			padding: 0 10px;
+			background-color: $brand-green-color;
+			border-radius: 6px;
+
+			a {
+				color: white;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
 	}
 }
 
-ul {
-	list-style: none;
-	margin-top: 0;
-	position: relative;
-	padding-left: 0;
-	li {
-		background-color: $brand-green-color;
-		border-radius: 6px;
+@media (max-width: $phone-maxwidth) {
+	.phone-hide {
+		display: none;
+	}
+
+	.nav :nth-child(7) {
+		margin-right: auto;
+	}
+
+	.burger {
+		display: block;
 	}
 }
 
-// .burger {
-//   display: block;
-//   color: $brand-green-color;
-//   font-size: 35px;
-//   text-align: right;
-//   padding-right: 10px;
-//   ul {
-//     display: none;
-//     margin: 0;
-//     list-style: none;
-//     position: absolute;
-//     z-index: 1;
-//     left: 120px;
-//     top: 170px;
-//     li {
-//     font-size: 25px;
-//     height: 45px;
-//     line-height: 45px;
-//     border-bottom: 1px solid white;
-//     width: 150px;
-//     margin-left: auto;
-//     background-color: $brand-green-color;
-//     border-radius: 6px;
-//     a {
-//       color: white;
-//       display: flex;
-//       justify-content: center;
-//     }
-//     }
-//   }
-// }
+/* ^^^ Navigation menu */
 
-// .nav {
-//   height: 68px;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-//   div:nth-child(1) {
-//     margin-right: auto;
-//   }
-//   div:nth-child(1n + 2) {
-//     margin-left: 35px;
-//   }
-//   .btn {
-//     border: 0.25px solid #666;
-//     color: $brand-dark-color;
-//     background: white;
-//     &:hover {
-//       background-color: darken($color: white, $amount: 5);
-//     }
-//   }
-// }
-*/
+/* Hero vvv */
+.hero {
+	display: flex;
+	align-items: center;
+	margin-top: 11px;
+	height: 753px;
+	background-color: #fafafa;
+}
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: 45% 1fr;
+	align-items: center;
+	h1 {
+		font-family: "PT Sans", sans-serif;
+		font-size: 60px;
+		color: #111;
+	}
+	p {
+		font-size: 20px;
+		line-height: 32px;
+		margin: 30px 30px 40px 0;
+	}
+	button {
+		margin-bottom: 35px;
+	}
+	img {
+		max-width: 814px;
+		height: auto;
+	}
+}
+/* ^^^ Hero */
+
+/* sponsors vvv */
+.sponsors {
+	border-top: 0.25px solid #707070;
+	border-bottom: 0.25px solid #707070;
+}
+.sponsors-logo {
+	height: 102px;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	img {
+		padding: 10px;
+	}
+}
+/* ^^^ sponsors */
+
+/* features vvv */
+.features {
+	height: 793px;
+	padding-top: 80px;
+	.title {
+		text-align: center;
+	}
+}
+.features-cards {
+	margin-top: 42px;
+	display: flex;
+	justify-content: space-between;
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		text-align: center;
+		max-width: 265px;
+		height: 328px;
+		border-radius: 5px;
+		border: 0.25px solid #707070;
+		img,
+		h6,
+		h4 {
+			margin: 0 auto;
+		}
+		img {
+			// max-width: 61px;
+			// height: auto;
+			padding: 10px 0 5px 0;
+		}
+		h4 {
+			margin: 10px 0 30px 0;
+		}
+		h6 {
+			padding: 0 35px 10px 35px;
+		}
+		&-underline {
+			text-decoration-line: underline;
+			text-underline-position: under;
+		}
+	}
+}
+/* ^^^ features */
+//
+/* you-need vvv */
+.you-need {
+	height: 625px;
+	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
+	background-position: center center;
+	background-size: 1939px 1044px;
+}
+.you-need-wrapper {
+	max-height: 625px;
+	padding-bottom: 97px;
+	display: grid;
+	/* Inserted one empty row and column, for margins between grid items */
+	grid-template: 1fr 0.1fr 0.65fr / repeat(3, 0.5fr) 0.15fr 1fr;
+	& h4,
+	& h5,
+	& h6 {
+		color: white;
+		white-space: pre-line;
+	}
+	& h4 {
+		margin: 15px 0;
+	}
+	& :nth-child(1) {
+		grid-area: 1/1/2/4;
+		white-space: pre-line;
+		align-self: flex-end;
+		// margin-bottom: 20px;
+	}
+	& :nth-child(2) {
+		grid-area: 3/1/4/2;
+	}
+	& :nth-child(3) {
+		grid-area: 3/2/4/3;
+	}
+	& :nth-child(4) {
+		grid-area: 3/3/4/4;
+	}
+	& :nth-child(5) {
+		grid-area: 1/5/4/6;
+		align-self: flex-end;
+		justify-self: flex-start;
+	}
+}
+/* ^^^ you-need */
+
+/* send-message vvv */
+.send-message {
+	height: 840px;
+	& > :nth-child(1) {
+		max-width: 800px;
+		padding: 85px 0 0;
+		margin: 0 auto;
+	}
+	h4 {
+		margin: 40px 0 10px 0;
+		font-size: 22px;
+	}
+	h3 {
+		text-align: center;
+	}
+	input,
+	textarea {
+		width: 100%;
+		height: 50px;
+		padding: 10px;
+		font-family: "Roboto", sans-serif;
+		font-size: 18px;
+		border: 1px solid $brand-dark-color;
+		border-radius: 4px;
+	}
+	textarea {
+		height: 160px;
+		resize: none;
+	}
+	.btn {
+		height: 80px;
+		width: 220px;
+		border-radius: 0px 4px 4px 0px;
+		font-size: 22px;
+		font-family: "PT Sans", sans-serif;
+		margin: 20px 0 0 auto;
+	}
+}
+/* ^^^ send-message */
+.solution {
+	height: 523px;
+	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
+	background-position: center center;
+	background-size: 1939px 1044px;
+
+	& > :nth-child(1) {
+		min-height: 200px;
+	}
+}
+/* solution vvv */
+
+/* ^^^ solution */
+//
+//
+/* blog vvv */
+/* ^^^ blog */
+//
+//
+/* footer vvv */
+/* ^^^ footer */
