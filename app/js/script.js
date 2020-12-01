@@ -1,28 +1,29 @@
 function burgerMenuToggle() {
-	var burgerMenuState = document.getElementById('burger-menu');
-	if (burgerMenuState.style.display === 'none') {
-		burgerMenuState.style.display = 'block';
+	var burgerMenuState = document.getElementById("burger-menu");
+	if (burgerMenuState.style.display === "none") {
+		burgerMenuState.style.display = "block";
 	} else {
-		burgerMenuState.style.display = 'none';
+		burgerMenuState.style.display = "none";
 	}
 }
 
-
 // When the user scrolls down 400px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+	scrollFunction();
+};
 
 function scrollFunction() {
 	//Get the button:
-	mybutton = document.getElementById('to-top');
-	// if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-	// if (document.body.scrollTop > 400) { // For Safari
-	if (document.documentElement.scrollTop > 1) { // For Chrome, Firefox, IE and Opera
+	mybutton = document.getElementById("to-top");
+	if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+		// if (document.body.scrollTop > 400) { // For Safari
+		// if (document.documentElement.scrollTop > 1) {
+		// For Chrome, Firefox, IE and Opera
 		mybutton.style.display = "block";
 	} else {
 		mybutton.style.display = "none";
 	}
 }
-
 
 // tiny-slider preferences
 tns({
@@ -35,7 +36,7 @@ tns({
 	items: 1,
 	autoplayHoverPause: true,
 	autoplayButtonOutput: false,
-	autoHeight: true,
+	// autoHeight: true,
 	mouseDrag: true,
 	slideBy: "page",
 	autoplay: true,

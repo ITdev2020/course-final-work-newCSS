@@ -1,6 +1,6 @@
 <!-- Section: Footer -->
-<section class="footer default-width">
-    <div>
+<section class="footer">
+    <div class="default-width">
         <div>
             <h5>Resources</h5>
             <h6>About Us</h6>
@@ -31,7 +31,6 @@
     </div>
     <h6>
         &copy;
-        <?php echo date('Y'); ?>
-        Built with pride and caffeine. All rights reserved.
+        <?php echo date('Y'); ?> Built with pride and caffeine. All rights reserved.
     </h6>
 </section>

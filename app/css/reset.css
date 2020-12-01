@@ -15,8 +15,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
+	font-weight: lighter;
 	margin: 0;
+	white-space: pre-line;
 }
 
 a {
@@ -24,9 +25,11 @@ a {
 }
 
 input,
+textarea,
 button {
 	border: none;
 	outline: none;
+	padding: 0px;
 }
 
 button:focus {

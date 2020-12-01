@@ -13,7 +13,7 @@ require __DIR__ . '/../app/src/app.php';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Healthy lifestyle</title>
 		<link rel="shortcut icon" href="../app/assets/favicon.ico">
-		<!-- Link Google Font Roboto-->
+		<!-- Link Google Open Sans & Font Roboto-->
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 		<!-- Link Google Font PT Sans regular-->
 		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet" />
