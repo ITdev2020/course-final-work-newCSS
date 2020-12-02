@@ -17,6 +17,7 @@ $brand-dark-color: #222;
 /* different media width */
 $tablet-maxwidth: 800px;
 $phone-maxwidth: 500px;
+$card-width: 266px;
 
 body {
 	font-family: "Roboto", sans-serif;
@@ -334,20 +335,25 @@ h6 {
 		}
 	}
 }
+div {
+	outline: 2px solid red;
+}
 .features-cards {
 	margin-top: 42px;
 	display: flex;
 	justify-content: space-between;
+	// overflow: hidden;
 	&-item {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
 		text-align: center;
-		max-width: 265px;
+		min-width: $card-width;
+		margin: 0 10px;
 		height: 328px;
 		border-radius: 5px;
 		border: 0.25px solid #707070;
+		position: relative;
 		img,
 		h6,
 		h4 {
@@ -370,6 +376,73 @@ h6 {
 		}
 	}
 }
+
+.anim01 {
+	background: lightblue;
+	opacity: 0.5;
+	left: 0;
+	animation: 10s linear 0s infinite move1;
+}
+.anim02 {
+	background: lightsalmon;
+	opacity: 0.5;
+	left: 0;
+	animation: 10s linear 2.5s infinite move2;
+}
+.anim03 {
+	background: rgb(255, 255, 186);
+	opacity: 0.5;
+	left: 0;
+	animation: 10s linear 5s infinite move3;
+}
+.anim04 {
+	background: lightgray;
+	opacity: 0.5;
+	left: 0;
+	animation: 10s linear 7.5s infinite move4;
+}
+
+// @keyframes move1 {
+from {
+	// left: 0 - $card-width - 10px;
+	left: 0 - $card-width;
+}
+to {
+	// left: $card-width * 4 + 40px;
+	left: $card-width * 4;
+}
+// }
+// @keyframes move2 {
+from {
+	// left: 0 - $card-width * 2 - 20px;
+	left: 0 - $card-width * 2;
+}
+to {
+	// left: $card-width * 3 + 30px;
+	left: $card-width * 3;
+}
+// }
+@keyframes move3 {
+	from {
+		// left: 0 - $card-width * 3 - 40px;
+		left: 0 - $card-width * 3;
+	}
+	to {
+		// left: $card-width * 2 + 20px;
+		left: $card-width * 2;
+	}
+}
+@keyframes move4 {
+	from {
+		// left: 0 - $card-width * 4 - 60px;
+		left: 0 - $card-width * 4;
+	}
+	to {
+		// left: $card-width * 1 + 10px;
+		left: $card-width * 1;
+	}
+}
+
 /* ^^^ features */
 //
 /* you-need vvv */

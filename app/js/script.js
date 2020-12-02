@@ -25,6 +25,22 @@ function scrollFunction() {
 	}
 }
 
+// Features slider pausing
+var slideItem = document.getElementsByClassName("features-cards-item");
+var slideWrapper = document.getElementsByClassName("features-cards");
+slideWrapper[0].addEventListener("mouseover", function (event) {
+	slideItem[0].style.animationPlayState = "paused";
+	slideItem[1].style.animationPlayState = "paused";
+	slideItem[2].style.animationPlayState = "paused";
+	slideItem[3].style.animationPlayState = "paused";
+});
+slideWrapper[0].addEventListener("mouseout", function (event) {
+	slideItem[0].style.animationPlayState = "running";
+	slideItem[1].style.animationPlayState = "running";
+	slideItem[2].style.animationPlayState = "running";
+	slideItem[3].style.animationPlayState = "running";
+});
+
 // tiny-slider preferences
 tns({
 	container: ".slider",
