@@ -14,10 +14,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	font-weight: lighter;
 	margin: 0;
-	white-space: pre-line;
+	/* white-space: pre-line; */
 }
 
 a {

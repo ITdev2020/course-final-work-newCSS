@@ -1,6 +1,6 @@
 <!-- Section: Footer -->
 <section class="footer">
-    <div class="default-width">
+    <div class="footer-grid-wrapper default-width">
         <div>
             <h5>Resources</h5>
             <h6>About Us</h6>

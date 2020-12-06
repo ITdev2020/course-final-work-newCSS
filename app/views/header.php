@@ -10,15 +10,16 @@
     <div class="hero">
       <div class="grid-wrapper default-width">
           <!-- Left: hero text -->
-        <div>
+        <!-- <div> -->
           <h1>Organic & natural healthy lifestyle</h1>
-          <p>Performance review synergize productive mindfulness for downselect and horsehead offer.</p>
+          <p>Performance review synergize productive mindfulness
+            for downselect and horsehead offer.</p>
           <button class="btn" onclick="document.location='#home'">Discover More</button>
-        </div>
+        <!-- </div> -->
           <!-- Right: hero image -->
-        <div>
+        <!-- <div> -->
           <img src="../app/assets/hero.png" alt="header image" />
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
