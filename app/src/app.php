@@ -22,6 +22,7 @@
                 $autorius = 'Nuo: ' . $userName . ', ' . $userEmail;
                 $zinute = htmlspecialchars($myMessage);
 
+                // // send mail
                 // mail($to, $subject, $autorius, $zinute, $from);
                 // echo "<script>alert('Dekojame. Jusu zinute gauta. Netrukus susisieksime.');</script>";
             }
