@@ -1,6 +1,7 @@
 <!-- Login -->
 <section class="login default-width">
   <div>
+
     <?php
       if(isset($_SESSION['u_id'])) {
         echo '<form action="../app/src/includes/logout.inc.php" method="post">
@@ -14,10 +15,12 @@
               </form>';
       }
     ?>
+
     <?php
       if(isset($_SESSION['u_id'])) {
-        echo "<p>Prisijungete sekmingai</p>";
+        echo "<p>Login successful</p>";
       }
     ?>
+
   </div>
 </section>

@@ -1,11 +1,14 @@
 		<!-- Section: Features -->
 		<section class="features">
+
 			<div class="default-width">
+
 				<!-- Title -->
 				<div class="title">
 					<h5>Organic Business Features</h5>
 					<h3>Our Unique Features</h3>
 				</div>
+
 				<!-- Cards -->
 				<div class="features-cards">
 					<div class="features-cards-item anim01">
@@ -33,5 +36,7 @@
 						<h6 class="features-cards-item-underline">Learn More</h6>
 					</div>
 				</div>
+
 			</div>
+
 		</section>

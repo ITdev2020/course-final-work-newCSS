@@ -1,6 +1,8 @@
 		<!-- Section: Blog -->
 		<section class="blog default-width">
+
 			<div>
+
 				<!-- Title -->
 				<div class="title">
 					<h5>Daily Blog journal</h5>
@@ -58,5 +60,7 @@
 						<h6>David Beck <i class="fas fa-circle"></i> April 13, 2019</h6>
 					</div>
 				</div>
+
 			</div>
+
 		</section>

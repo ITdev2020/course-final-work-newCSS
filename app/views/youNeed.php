@@ -1,7 +1,8 @@
 <!-- Section: Everything you ever need. -->
 <section class="you-need">
 	<div class="you-need-wrapper default-width">
-		<!-- <div class="left"> -->
+
+	<!-- <div class="left"> -->
 			<div>
 				<h5>Set up your website in minutes and bring your brand to life.</h5>
 				<h2>Organic. Fresh. Natural.
@@ -25,9 +26,11 @@
 				<h6>Cobbler's pose, bound angle
 					pose staff pose bow.</h6>
 			</div>
-		<!-- </div> -->
+
+	<!-- <div class="right"> -->
 		<div class="right">
 			<img src="../app/assets/hero-2.png" alt="hero-2 image" />
 		</div>
+
 	</div>
 </section>

@@ -25,7 +25,7 @@ function scrollFunction() {
 	}
 }
 
-// Features slider pausing
+// .features (section) MySlider pausing
 var slideItem = document.getElementsByClassName("features-cards-item");
 var slideWrapper = document.getElementsByClassName("features-cards");
 slideWrapper[0].addEventListener("mouseover", function (event) {
