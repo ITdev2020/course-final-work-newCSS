@@ -1,3 +1,11 @@
+div {
+  outline: 1px solid red;
+}
+
+div > *:nth-child(1n + 2) {
+  outline: 1px solid green;
+}
+
 /* Commons vvv ====================== */
 /* Brand color */
 /* different media width */
@@ -516,7 +524,6 @@ h6 {
 .anim01 {
   background: lightblue;
   opacity: 0.5;
-  left: 0;
   -webkit-animation: 10s linear 0s infinite move1;
           animation: 10s linear 0s infinite move1;
 }
@@ -524,7 +531,6 @@ h6 {
 .anim02 {
   background: lightsalmon;
   opacity: 0.5;
-  left: 0;
   -webkit-animation: 10s linear 2.5s infinite move2;
           animation: 10s linear 2.5s infinite move2;
 }
@@ -532,7 +538,6 @@ h6 {
 .anim03 {
   background: #ffffba;
   opacity: 0.5;
-  left: 0;
   -webkit-animation: 10s linear 5s infinite move3;
           animation: 10s linear 5s infinite move3;
 }
@@ -540,80 +545,79 @@ h6 {
 .anim04 {
   background: lightgray;
   opacity: 0.5;
-  left: 0;
   -webkit-animation: 10s linear 7.5s infinite move4;
           animation: 10s linear 7.5s infinite move4;
 }
 
 @-webkit-keyframes move1 {
   from {
-    left: -133px;
+    left: -266px;
   }
   to {
-    left: 931px;
+    left: 1064px;
   }
 }
 
 @keyframes move1 {
   from {
-    left: -133px;
+    left: -266px;
   }
   to {
-    left: 931px;
+    left: 1064px;
   }
 }
 
 @-webkit-keyframes move2 {
   from {
-    left: -399px;
+    left: -532px;
   }
   to {
-    left: 665px;
+    left: 798px;
   }
 }
 
 @keyframes move2 {
   from {
-    left: -399px;
+    left: -532px;
   }
   to {
-    left: 665px;
+    left: 798px;
   }
 }
 
 @-webkit-keyframes move3 {
   from {
-    left: -665px;
+    left: -798px;
   }
   to {
-    left: 399px;
+    left: 532px;
   }
 }
 
 @keyframes move3 {
   from {
-    left: -665px;
+    left: -798px;
   }
   to {
-    left: 399px;
+    left: 532px;
   }
 }
 
 @-webkit-keyframes move4 {
   from {
-    left: -931px;
+    left: -1064px;
   }
   to {
-    left: 133px;
+    left: 266px;
   }
 }
 
 @keyframes move4 {
   from {
-    left: -931px;
+    left: -1064px;
   }
   to {
-    left: 133px;
+    left: 266px;
   }
 }
 

@@ -1,9 +1,9 @@
-// for visual tag sizes checking:
+// for visual html tag sizes checking:
 div {
-	// outline: 1px solid red;
+	outline: 1px solid red;
 
 	& > *:nth-child(1n + 2) {
-		// outline: 1px solid green;
+		outline: 1px solid green;
 	}
 }
 
@@ -447,61 +447,63 @@ h6 {
 .anim01 {
 	background: lightblue;
 	opacity: 0.5;
-	left: 0;
+	// left: 0;
 	// left: 0 - $card-width / 2;
 	animation: 10s linear 0s infinite move1;
 }
 .anim02 {
 	background: lightsalmon;
 	opacity: 0.5;
-	left: 0;
+	// left: 0;
 	// left: 0 - $card-width * 1.5;
 	animation: 10s linear 2.5s infinite move2;
 }
 .anim03 {
 	background: rgb(255, 255, 186);
 	opacity: 0.5;
-	left: 0;
+	// left: 0;
 	// left: 0 - $card-width * 2.5;
 	animation: 10s linear 5s infinite move3;
 }
 .anim04 {
 	background: lightgray;
 	opacity: 0.5;
-	left: 0;
+	// left: 0;
 	// left: 0 - $card-width * 3.5;
 	animation: 10s linear 7.5s infinite move4;
 }
 @keyframes move1 {
 	from {
-		left: 0 - $card-width / 2;
+		left: 0 - $card-width * 1;
 	}
 	to {
-		left: $card-width * 3.5;
+		left: $card-width * 4;
+		// left: $card-width * 4.5;
 	}
 }
 @keyframes move2 {
 	from {
-		left: 0 - $card-width * 1.5;
+		left: 0 - $card-width * 2;
 	}
 	to {
-		left: $card-width * 2.5;
+		left: $card-width * 3;
+		// left: $card-width * 3;
 	}
 }
 @keyframes move3 {
 	from {
-		left: 0 - $card-width * 2.5;
+		left: 0 - $card-width * 3;
 	}
 	to {
-		left: $card-width * 1.5;
+		left: $card-width * 2;
 	}
 }
 @keyframes move4 {
 	from {
-		left: 0 - $card-width * 3.5;
+		left: 0 - $card-width * 4;
 	}
 	to {
-		left: $card-width / 2;
+		left: $card-width;
 	}
 }
 @media (max-width: $phone-maxwidth) {
