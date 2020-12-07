@@ -75,45 +75,45 @@ h6 {
 /* Commons ^^^ ====================== */
 /* Back to top button vvv */
 .to-top-btn {
-  display: none;
   /* Hidden by default */
-  position: fixed;
+  display: none;
   /* Fixed/sticky position */
-  bottom: 20px;
+  position: fixed;
   /* Place the button at the bottom of the page */
-  right: 30px;
+  bottom: 20px;
   /* Place the button 30px from the right */
-  z-index: 99;
+  right: 30px;
   /* Make sure it does not overlap */
-  background-color: #34c759;
+  z-index: 99;
   /* Set a background brand color */
-  color: white;
+  background-color: #34c759;
   /* Text color */
-  cursor: pointer;
+  color: white;
   /* Change a mouse pointer on hover */
-  padding: 15px;
+  cursor: pointer;
   /* Some padding */
-  border-radius: 10px;
+  padding: 15px;
   /* Rounded corners */
-  font-size: 2em;
+  border-radius: 10px;
   /* Increase font size */
+  font-size: 2em;
   margin: 30px;
 }
 
 .to-top-btn:hover {
-  background-color: #2b9c48;
   /* Add a darker brand color on hover */
+  background-color: #2b9c48;
 }
 
 .to-top-btn:active {
-  background-color: #666;
   /* Add a gray background on active */
+  background-color: #666;
 }
 
 @media (max-width: 500px) {
   .to-top-btn {
+    /*on phone - margins to zero */
     margin: 0;
-    /*on phone margins to zero */
   }
 }
 
@@ -327,10 +327,17 @@ h6 {
 
 @media (max-width: 1100px) {
   .hero {
-    height: 400px;
+    height: auto;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .grid-wrapper {
+    margin: 20px auto;
+  }
+  .grid-wrapper h1,
+  .grid-wrapper p {
+    line-height: normal;
   }
   .grid-wrapper h1 {
     -ms-grid-row: 1;
@@ -338,7 +345,7 @@ h6 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: 1/1/2/3;
-    font-size: 40px;
+    font-size: 5vw;
   }
   .grid-wrapper p {
     -ms-grid-row: 2;
@@ -349,7 +356,7 @@ h6 {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    font-size: 16px;
+    font-size: 14px;
   }
   .grid-wrapper img {
     -ms-grid-row: 2;
@@ -524,30 +531,26 @@ h6 {
 
 .anim01 {
   background: lightblue;
-  opacity: 0.5;
-  -webkit-animation: 10s linear 0s infinite move1;
-          animation: 10s linear 0s infinite move1;
+  -webkit-animation: 50s linear 0s infinite move1;
+          animation: 50s linear 0s infinite move1;
 }
 
 .anim02 {
   background: lightsalmon;
-  opacity: 0.5;
-  -webkit-animation: 10s linear 2.5s infinite move2;
-          animation: 10s linear 2.5s infinite move2;
+  -webkit-animation: 50s linear 12.5s infinite move2;
+          animation: 50s linear 12.5s infinite move2;
 }
 
 .anim03 {
   background: #ffffba;
-  opacity: 0.5;
-  -webkit-animation: 10s linear 5s infinite move3;
-          animation: 10s linear 5s infinite move3;
+  -webkit-animation: 50s linear 25s infinite move3;
+          animation: 50s linear 25s infinite move3;
 }
 
 .anim04 {
   background: lightgray;
-  opacity: 0.5;
-  -webkit-animation: 10s linear 7.5s infinite move4;
-          animation: 10s linear 7.5s infinite move4;
+  -webkit-animation: 50s linear 37.5s infinite move4;
+          animation: 50s linear 37.5s infinite move4;
 }
 
 @-webkit-keyframes move1 {

@@ -1,11 +1,11 @@
 // for visual html tag sizes checking:
-div {
-	// outline: 1px solid red;
+// div {
+// outline: 1px solid red;
 
-	& > *:nth-child(1n + 2) {
-		// outline: 1px solid green;
-	}
-}
+// & > *:nth-child(1n + 2) {
+// outline: 1px solid green;
+// }
+// }
 
 /* Commons vvv ====================== */
 /* Brand color */
@@ -90,45 +90,45 @@ h6 {
 
 /* Back to top button vvv */
 .to-top-btn {
-	display: none;
 	/* Hidden by default */
-	position: fixed;
+	display: none;
 	/* Fixed/sticky position */
-	bottom: 20px;
+	position: fixed;
 	/* Place the button at the bottom of the page */
-	right: 30px;
+	bottom: 20px;
 	/* Place the button 30px from the right */
-	z-index: 99;
+	right: 30px;
 	/* Make sure it does not overlap */
-	background-color: $brand-green-color;
+	z-index: 99;
 	/* Set a background brand color */
-	color: white;
+	background-color: $brand-green-color;
 	/* Text color */
-	cursor: pointer;
+	color: white;
 	/* Change a mouse pointer on hover */
-	padding: 15px;
+	cursor: pointer;
 	/* Some padding */
-	border-radius: 10px;
+	padding: 15px;
 	/* Rounded corners */
-	font-size: 2em;
+	border-radius: 10px;
 	/* Increase font size */
+	font-size: 2em;
 	margin: 30px;
 
 	&:hover {
-		background-color: $brand-green-color-hover;
 		/* Add a darker brand color on hover */
+		background-color: $brand-green-color-hover;
 	}
 
 	&:active {
-		background-color: $brand-gray-text-color;
 		/* Add a gray background on active */
+		background-color: $brand-gray-text-color;
 	}
 }
 
 @media (max-width: $phone-maxwidth) {
 	.to-top-btn {
+		/*on phone - margins to zero */
 		margin: 0;
-		/*on phone margins to zero */
 	}
 }
 
@@ -305,18 +305,23 @@ h6 {
 
 @media (max-width: 1100px) {
 	.hero {
-		height: 400px;
+		height: auto;
 		align-items: flex-end;
 	}
 	.grid-wrapper {
+		margin: 20px auto;
+		h1,
+		p {
+			line-height: normal;
+		}
 		h1 {
 			grid-area: 1/1/2/3;
-			font-size: 40px;
+			font-size: 5vw;
 		}
 		p {
 			grid-area: 2/1/3/2;
 			align-self: center;
-			font-size: 16px;
+			font-size: 14px;
 		}
 		img {
 			grid-area: 2/2/6/3;
@@ -332,24 +337,18 @@ h6 {
 		height: auto;
 	}
 	.grid-wrapper {
-		// display: grid;
 		grid-template: 110px 100px 90px 280px / 100%;
 
-		// align-items: center;
 		h1 {
 			grid-area: 1/1/2/2;
-			// font-family: "PT Sans", sans-serif;
 			font-size: 32px;
 			line-height: 45px;
-			// color: #111;
 			align-self: center;
 		}
 		p {
 			grid-area: 2/1/3/2;
 			font-size: 16px;
-			// margin: 20px 0;
 			line-height: 24px;
-			// align-self: flex-start;
 		}
 		button {
 			grid-area: 3/1/4/2;
@@ -358,9 +357,6 @@ h6 {
 		}
 		img {
 			grid-area: 4/1/5/2;
-			// max-width: 113%;
-			// height: auto;
-			// margin-left: 30px;
 		}
 	}
 }
@@ -393,7 +389,6 @@ h6 {
 
 /* features vvv */
 .features {
-	// height: 793px;
 	padding: 80px 0 270px 0;
 	.title {
 		text-align: center;
@@ -405,9 +400,6 @@ h6 {
 		}
 	}
 }
-// div {
-// 	outline: 2px solid red;
-// }
 .features-cards {
 	margin-top: 42px;
 	display: flex;
@@ -421,7 +413,6 @@ h6 {
 		min-width: $card-width;
 		max-width: $card-width;
 
-		// margin: 0 10px;
 		height: 328px;
 		border-radius: 5px;
 		border: 0.25px solid #707070;
@@ -432,8 +423,6 @@ h6 {
 			margin: 0 auto;
 		}
 		img {
-			// max-width: 61px;
-			// height: auto;
 			padding: 10px 0 5px 0;
 		}
 		h4 {
@@ -448,34 +437,21 @@ h6 {
 		}
 	}
 }
-
 .anim01 {
 	background: lightblue;
-	opacity: 0.5;
-	// left: 0;
-	// left: 0 - $card-width / 2;
-	animation: 10s linear 0s infinite move1;
+	animation: 50s linear 0s infinite move1;
 }
 .anim02 {
 	background: lightsalmon;
-	opacity: 0.5;
-	// left: 0;
-	// left: 0 - $card-width * 1.5;
-	animation: 10s linear 2.5s infinite move2;
+	animation: 50s linear 12.5s infinite move2;
 }
 .anim03 {
 	background: rgb(255, 255, 186);
-	opacity: 0.5;
-	// left: 0;
-	// left: 0 - $card-width * 2.5;
-	animation: 10s linear 5s infinite move3;
+	animation: 50s linear 25s infinite move3;
 }
 .anim04 {
 	background: lightgray;
-	opacity: 0.5;
-	// left: 0;
-	// left: 0 - $card-width * 3.5;
-	animation: 10s linear 7.5s infinite move4;
+	animation: 50s linear 37.5s infinite move4;
 }
 @keyframes move1 {
 	from {
@@ -483,7 +459,6 @@ h6 {
 	}
 	to {
 		left: $card-width * 4;
-		// left: $card-width * 4.5;
 	}
 }
 @keyframes move2 {
@@ -492,7 +467,6 @@ h6 {
 	}
 	to {
 		left: $card-width * 3;
-		// left: $card-width * 3;
 	}
 }
 @keyframes move3 {
@@ -520,7 +494,6 @@ h6 {
 //
 /* you-need vvv */
 .you-need {
-	// height: 625px;
 	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
 	background-position: center center;
 	background-size: 1939px 1044px;
@@ -590,7 +563,6 @@ h6 {
 		padding: 60px 10px;
 
 		& > :nth-child(1) {
-			// grid-area: 1/1/2/5;
 			align-self: center;
 			max-width: 520px;
 		}
@@ -658,11 +630,8 @@ h6 {
 	align-items: center;
 
 	& > :nth-child(1) {
-		// display: flex;
-		// flex-direction: column;
 		text-align: center;
 		max-width: 600px;
-		// margin: 0 auto;
 		h6 {
 			color: $brand-gray-bg-color;
 			opacity: 0.6;
@@ -694,11 +663,9 @@ h6 {
 	}
 	.tns-outer {
 		margin-top: 20px;
-		// height: auto;
 	}
 	.slider__item {
 		margin: 0 auto;
-		// padding: 0 10px 0 10px;
 		img {
 			border-radius: 5px;
 			max-width: 266px;
@@ -725,7 +692,6 @@ h6 {
 
 /* footer vvv */
 .footer {
-	// height: 391px;
 	background-color: #2a2a2a;
 	padding: 90px 0 40px 0;
 	h5,
@@ -744,7 +710,6 @@ h6 {
 }
 .footer-grid-wrapper {
 	display: grid;
-	// grid-template-columns: 25% 25% 50%;
 	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 	gap: 40px 0;
 	margin-bottom: 135px;
