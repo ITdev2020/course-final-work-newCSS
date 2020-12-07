@@ -1,11 +1,3 @@
-div {
-  outline: 1px solid red;
-}
-
-div > *:nth-child(1n + 2) {
-  outline: 1px solid green;
-}
-
 /* Commons vvv ====================== */
 /* Brand color */
 /* different media width */
@@ -335,7 +327,10 @@ h6 {
 
 @media (max-width: 1100px) {
   .hero {
-    height: 550px;
+    height: 400px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .grid-wrapper h1 {
     -ms-grid-row: 1;
@@ -372,6 +367,7 @@ h6 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    height: auto;
   }
   .grid-wrapper {
     -ms-grid-rows: 110px 100px 90px 280px;
@@ -456,8 +452,7 @@ h6 {
 /* ^^^ sponsors */
 /* features vvv */
 .features {
-  height: 793px;
-  padding-top: 80px;
+  padding: 80px 0 270px 0;
 }
 
 .features .title {
@@ -629,14 +624,13 @@ h6 {
 
 @media (max-width: 500px) {
   .features {
-    height: 600px;
+    padding: 60px 0 100px 0;
   }
 }
 
 /* ^^^ features */
 /* you-need vvv */
 .you-need {
-  height: 625px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../assets/background_.png);
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
   background-position: center center;
@@ -645,7 +639,7 @@ h6 {
 
 .you-need-wrapper {
   max-height: 625px;
-  padding-bottom: 97px;
+  padding: 20px 0 97px 10px;
   display: -ms-grid;
   display: grid;
   /* Inserted one empty row and column, for margins between grid items */
@@ -746,6 +740,26 @@ h6 {
   }
 }
 
+@media (max-width: 500px) {
+  .you-need-wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    padding: 60px 10px;
+  }
+  .you-need-wrapper > :nth-child(1) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 520px;
+  }
+  .you-need-wrapper > :nth-child(4) {
+    display: block;
+  }
+  .you-need-wrapper > :nth-child(5) {
+    display: none;
+  }
+}
+
 /* ^^^ you-need */
 /* send-message vvv */
 .send-message {
@@ -796,6 +810,7 @@ h6 {
 /* solution vvv */
 .solution {
   height: 523px;
+  padding: 0 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../assets/background_.png);
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
   background-position: center center;

@@ -1,9 +1,9 @@
 // for visual html tag sizes checking:
 div {
-	outline: 1px solid red;
+	// outline: 1px solid red;
 
 	& > *:nth-child(1n + 2) {
-		outline: 1px solid green;
+		// outline: 1px solid green;
 	}
 }
 
@@ -305,7 +305,8 @@ h6 {
 
 @media (max-width: 1100px) {
 	.hero {
-		height: 550px;
+		height: 400px;
+		align-items: flex-end;
 	}
 	.grid-wrapper {
 		h1 {
@@ -328,6 +329,7 @@ h6 {
 @media (max-width: $phone-maxwidth) {
 	.hero {
 		align-items: flex-start;
+		height: auto;
 	}
 	.grid-wrapper {
 		// display: grid;
@@ -391,8 +393,8 @@ h6 {
 
 /* features vvv */
 .features {
-	height: 793px;
-	padding-top: 80px;
+	// height: 793px;
+	padding: 80px 0 270px 0;
 	.title {
 		text-align: center;
 		h5 {
@@ -511,21 +513,21 @@ h6 {
 }
 @media (max-width: $phone-maxwidth) {
 	.features {
-		height: 600px;
+		padding: 60px 0 100px 0;
 	}
 }
 /* ^^^ features */
 //
 /* you-need vvv */
 .you-need {
-	height: 625px;
+	// height: 625px;
 	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
 	background-position: center center;
 	background-size: 1939px 1044px;
 }
 .you-need-wrapper {
 	max-height: 625px;
-	padding-bottom: 97px;
+	padding: 20px 0 97px 10px;
 	display: grid;
 	/* Inserted one empty row and column, for margins between grid items */
 	grid-template: 1fr 0.1fr 0.65fr / repeat(3, 17%) 4% 45%;
@@ -582,6 +584,25 @@ h6 {
 		}
 	}
 }
+@media (max-width: $phone-maxwidth) {
+	.you-need-wrapper {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 60px 10px;
+
+		& > :nth-child(1) {
+			// grid-area: 1/1/2/5;
+			align-self: center;
+			max-width: 520px;
+		}
+
+		& > :nth-child(4) {
+			display: block;
+		}
+		& > :nth-child(5) {
+			display: none;
+		}
+	}
+}
 
 /* ^^^ you-need */
 
@@ -628,7 +649,7 @@ h6 {
 /* solution vvv */
 .solution {
 	height: 523px;
-	// padding: 158px;
+	padding: 0 10px;
 	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/background_.png);
 	background-position: center center;
 	background-size: 1939px 1044px;
