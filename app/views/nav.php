@@ -46,7 +46,7 @@
         <a href="#home" onclick="burgerMenuToggle()">Blog</a>
       </li>
       <li id="burger-menu" class="mobmenu">
-        <a href="#home" onclick="burgerMenuToggle()">Contact</a>
+        <a href="#ourProducts" onclick="burgerMenuToggle()">Contact</a>
       </li>
     </ul>
   </div>
